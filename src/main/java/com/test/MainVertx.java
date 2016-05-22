@@ -54,7 +54,7 @@ public class MainVertx {
   }
 
   private static void makeSomeRequest(HttpClient client, Vertx vertx) {
-    // Delay get-request
+    // delayed request
     System.out.println("Request starts in 5 seconds...");
     vertx.setTimer(1000 * 5, p -> {
       HttpClientRequest request = client.request(HttpMethod.POST, 8888, "localhost", "/something", resp -> {
